@@ -1,25 +1,33 @@
 class Pet():
-    def _init_(self, name, age, happy):
+    def __init__(self, name, happy):
         self.name = name
-        self.age = age
         self.__happy = happy
 
     def interact(self):
         return f"{self.name} is playing fetch"
-    
-"""     def happy_level(self, joy):
-        self.__happy += joy
+
+    def happy_level(self, amount):
+        self.__happy += amount
 
     def show_happy_level(self):
         print(f"{self.name}'s happiness is now {self.__happy}")
 
-    def buy(self, item):
-        self.inventory.append(item)
-        print(self.inventory) """
 
+my_pet = Pet("Dog", 0)
+play = input("Do you want to play with your pet? : ")
+while play == "yes":
+    my_pet.happy_level(20)
+    print(my_pet.__dict__)
+    print("Your pet's happy level increased by 20!")
+    
+    continue_playing = input("Would you like to continue playing with your pet? : ")
+    if continue_playing == "yes":
+            my_pet.happy_level(20)
+            print(my_pet.__dict__)
+            print("Your pet's happy level increased by 20!")
+    else:
+            break
 
-my_pet = Pet("Dog", "2", "50")
-print(my_pet.interact())
 
 """ class BankAccount:
     def __init__(self, owner, balance):

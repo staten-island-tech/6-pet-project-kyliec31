@@ -21,10 +21,12 @@ while play == "yes":
     print("Your pet's happy level increased by 20!")
     
     continue_playing = input("Would you like to continue playing with your pet? : ")
+    
     if continue_playing == "yes":
             my_pet.happy_level(20)
-            print(my_pet.__dict__)
             print("Your pet's happy level increased by 20!")
+            print(my_pet.__dict__)
+            
     else:
             break
 

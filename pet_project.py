@@ -26,8 +26,10 @@ while play == "yes":
             my_pet.happy_level(20)
             print("Your pet's happy level increased by 20!")
             print(my_pet.__dict__)
-            
+
     else:
+            print("This is your pet's status:")
+            print(my_pet.__dict__)
             break
 
 
